@@ -1,4 +1,8 @@
+
 # MIT 6.824 Distributed Systems
+>### NOTE: Distributed system blackbox unboxing (focus RAFT).
+>I will make sure my solutions are different/upgraded compared to real solutions. They won't pass the testcases (the rule of course is to not public answer) but they are valid/better (test with self-formatted testcases)
+
 Labs and related materials from the [MIT 6.824 Distributed Systems](https://pdos.csail.mit.edu/6.824) course.
 
 <p align="center">
@@ -69,32 +73,6 @@ Mark your progress with this checklist.
   - [ ] Lab 3A: Key/value Service Without Log Compaction
   - [ ] Lab 3B: Key/value Service With Log Compaction
 - [ ] Lab 4: Sharded Key/Value Service
-
-## Testing
-All of the labs from the original source tree has been migrated to go modules. Except for mapreduce, the tests for all
-labs may be run as follows:
-
-```shell
-git clone https://github.com/arindas/mit-6.824-distributed-systems.git
-cd mit-6.824-distributed-systems
-cd pkg/${PACKAGE_TO_TEST}
-go test
-```
-
-For the mapreduce lab, run the tests as follows:
-```shell
-cd cmd/mr/scripts
-bash test-mr.sh  # single trial
-bash test-mr-many.sh $N_TRIALS  # multiple trials
-```
-
-## Building
-Required binaries can be built by running `go build` in the respective `cmd/` subdirectories.
-
-## Attribution
-Materials presented in this repository are based on the materials from [MIT 6.824 Distributed Systems](https://pdos.csail.mit.edu/6.824) course, which are distributed under the Creative Commons License, as mentioned on their website. This repository falls under fair use of the Creative Commons License.
-
-In case of any disputes, please contact: Arindam Das <dasarindam.mails@gmail.com>
 
 ## License
 This restructured repository is licensed under the MIT License. See [LICENSE](./LICENSE) for full license text.
