@@ -1,0 +1,754 @@
+*** Starting wc test.
+Number of tasks: 8 
+Take map task pls
+Number of tasks left:  7
+Take map task pls
+Number of tasks left:  6
+Take map task pls
+Number of tasks left:  5
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Take map task pls
+Number of tasks left:  4
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Take map task pls
+Number of tasks left:  3
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  2
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  1
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Take map task pls
+Number of tasks left:  0
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+The flag is  false Go idle
+Got idle! Do idle
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Num of unique keys:  2177
+Num of unique keys:  2173
+Num of unique keys:  2215
+Num of unique keys:  2209
+Num of unique keys:  2248
+Num of unique keys:  2251
+Num of unique keys:  2190
+Num of unique keys:  2233
+Num of unique keys:  2194
+Num of unique keys:  2217
+Done mapping! Full reduce tasks:  [reduce_4586955038194234419.txt reduce_8670198976233929372.txt reduce_5719679009403820338.txt reduce_3128703220847126399.txt reduce_2166637460488661713.txt reduce_2131726175950293313.txt reduce_5612522409011859451.txt reduce_4074114742855753992.txt]
+Take reduce task pls 3
+Do Reducing!!!
+Take reduce task pls 5
+Do Reducing!!!
+Take reduce task pls 1
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 2
+Do Reducing!!!
+Take reduce task pls 9
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 6
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 8
+Do Reducing!!!
+Take reduce task pls 7
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 0
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 4
+Do Reducing!!!
+Got idle! Do idle
+Done Reduce
+Calling Done Reduce
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Done Reduce
+Calling Done Reduce
+Close program now!
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+--- wc test: PASS
+*** Starting indexer test.
+Number of tasks: 8 
+Take map task pls
+Number of tasks left:  7
+Take map task pls
+Number of tasks left:  6
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Take map task pls
+Number of tasks left:  5
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Take map task pls
+Number of tasks left:  4
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Take map task pls
+Number of tasks left:  3
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  2
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  1
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Take map task pls
+Number of tasks left:  0
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Num of unique keys:  2215
+Num of unique keys:  2233
+Num of unique keys:  2194
+Num of unique keys:  2251
+Num of unique keys:  2217
+Num of unique keys:  2190
+Num of unique keys:  2177
+Num of unique keys:  2173
+Num of unique keys:  2209
+Num of unique keys:  2248
+Done mapping! Full reduce tasks:  [reduce_1995673527375771441.txt reduce_3835042439574492756.txt reduce_9000273279379876313.txt reduce_2040001516660893845.txt reduce_2455847587181868976.txt reduce_5841795953243300305.txt reduce_9023064543874618802.txt reduce_7854835911858249165.txt]
+Take reduce task pls 3
+Do Reducing!!!
+Take reduce task pls 2
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 8
+Do Reducing!!!
+Take reduce task pls 4
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 5
+Take reduce task pls 9
+Do Reducing!!!
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 6
+Do Reducing!!!
+Take reduce task pls 7
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 0
+Do Reducing!!!
+Take reduce task pls 1
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Close program now!
+Got idle! Do idle
+Got idle! Do idle
+--- indexer test: PASS
+*** Starting map parallelism test.
+Number of tasks: 8 
+Take map task pls
+Number of tasks left:  7
+Take map task pls
+Number of tasks left:  6
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Take map task pls
+Number of tasks left:  5
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Take map task pls
+Number of tasks left:  4
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Take map task pls
+Number of tasks left:  3
+Take map task pls
+Number of tasks left:  2
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  1
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Take map task pls
+Number of tasks left:  0
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Num of unique keys:  2
+Num of unique keys:  2
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Done mapping! Full reduce tasks:  [reduce_3458310190180166965.txt reduce_8893822210976939129.txt reduce_1857444900483097634.txt reduce_4205840242522042223.txt reduce_6600996736549101220.txt reduce_7613444964077558892.txt reduce_9038438138027505635.txt reduce_1979295506421155253.txt]
+Take reduce task pls 7
+Do Reducing!!!
+Done Reduce
+Take reduce task pls 4
+Calling Done Reduce
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 2
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 8
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 5
+Do Reducing!!!
+Take reduce task pls 0
+Done Reduce
+Calling Done Reduce
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 1
+Do Reducing!!!
+Take reduce task pls 3
+Done Reduce
+Calling Done Reduce
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 6
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 9
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Close program now!
+Got idle! Do idle
+Got idle! Do idle
+--- map parallelism test: PASS
+*** Starting reduce parallelism test.
+Number of tasks: 8 
+Take map task pls
+Number of tasks left:  7
+Take map task pls
+Number of tasks left:  6
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Take map task pls
+Number of tasks left:  5
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Take map task pls
+Number of tasks left:  4
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Take map task pls
+Number of tasks left:  3
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  2
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  1
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Take map task pls
+Number of tasks left:  0
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  2
+Num of unique keys:  2
+Num of unique keys:  1
+Num of unique keys:  1
+Num of unique keys:  1
+Num of unique keys:  1
+Num of unique keys:  1
+Num of unique keys:  1
+Done mapping! Full reduce tasks:  [reduce_295316191281335856.txt reduce_587931056769697469.txt reduce_3312663989945095037.txt reduce_6417365568964377688.txt reduce_2823653698474424331.txt reduce_3142530999695317339.txt reduce_6724585839999589066.txt reduce_3186827187321124972.txt]
+Take reduce task pls 9
+Do Reducing!!!
+Take reduce task pls 7
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 4
+Do Reducing!!!
+Take reduce task pls 1
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 3
+Take reduce task pls 8
+Do Reducing!!!
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 6
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 5
+Do Reducing!!!
+Take reduce task pls 0
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 2
+Do Reducing!!!
+Got idle! Do idle
+Done Reduce
+Calling Done Reduce
+Close program now!
+Got idle! Do idle
+--- reduce parallelism test: PASS
+*** Starting job count test.
+Number of tasks: 8 
+Take map task pls
+Number of tasks left:  7
+Take map task pls
+Number of tasks left:  6
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Take map task pls
+Number of tasks left:  5
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Take map task pls
+Number of tasks left:  4
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Take map task pls
+Number of tasks left:  3
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  2
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  1
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Take map task pls
+Number of tasks left:  0
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  1
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Done mapping! Full reduce tasks:  [reduce_6786702638528482583.txt reduce_6786702638528482583.txt reduce_6620276311759441212.txt reduce_6620276311759441212.txt reduce_7045807936395068317.txt reduce_7045807936395068317.txt reduce_3713717207640073885.txt reduce_3713717207640073885.txt]
+Take reduce task pls 3
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 9
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 7
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 5
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 8
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 2
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 1
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 0
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 4
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 6
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Close program now!
+Got idle! Do idle
+Got idle! Do idle
+--- job count test: PASS
+*** Starting early exit test.
+Number of tasks: 8 
+Take map task pls
+Number of tasks left:  7
+Take map task pls
+Number of tasks left:  6
+Take map task pls
+Number of tasks left:  5
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Take map task pls
+Number of tasks left:  4
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Take map task pls
+Number of tasks left:  3
+Take map task pls
+Number of tasks left:  2
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  1
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Take map task pls
+Number of tasks left:  0
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+The flag is  false Go idle
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Got idle! Do idle
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Num of unique keys:  1
+Num of unique keys:  1
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  2
+Num of unique keys:  1
+Num of unique keys:  0
+Num of unique keys:  1
+Num of unique keys:  2
+Done mapping! Full reduce tasks:  [reduce_5158805795867560666.txt reduce_1209187557622377341.txt reduce_389666349241101585.txt reduce_5676557339711987617.txt reduce_869822143513115409.txt reduce_5525571156081166030.txt reduce_2700069319114181010.txt reduce_1173800100358193153.txt]
+Take reduce task pls 0
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 5
+Do Reducing!!!
+Take reduce task pls 1
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 2
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 3
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 9
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 4
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 6
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 7
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 8
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Got idle! Do idle
+Done Reduce
+Calling Done Reduce
+Close program now!
+Got idle! Do idle
+Got idle! Do idle
+--- early exit test: PASS
+*** Starting crash test.
+Number of tasks: 8 
+Take map task pls
+Number of tasks left:  7
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Take map task pls
+Number of tasks left:  6
+Take map task pls
+Number of tasks left:  5
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+Take map task pls
+Number of tasks left:  4
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-being_ernest.txt]
+Sleep time:  3.067s
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-frankenstein.txt]
+Take map task pls
+Number of tasks left:  3
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  2
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Sleep time:  417ms
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-huckleberry_finn.txt]
+Take map task pls
+Number of tasks left:  1
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-sherlock_holmes.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-metamorphosis.txt]
+Take map task pls
+Number of tasks left:  0
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-tom_sawyer.txt]
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-dorian_gray.txt]
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+The flag is  false Go idle
+Got idle! Do idle
+Task timeout  [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Take map task pls
+Number of tasks left:  0
+Do Mapping!!! [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Sleep time:  203ms
+Calling Push Reduce [../../../../datasets/project-gutenberg/pg-grimm.txt]
+Num of unique keys:  0
+Num of unique keys:  1
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  0
+Num of unique keys:  1
+Num of unique keys:  0
+Num of unique keys:  1
+Num of unique keys:  1
+Done mapping! Full reduce tasks:  [reduce_31586611487726771.txt reduce_301899104821765676.txt reduce_5372036081175185915.txt reduce_237969051280182933.txt reduce_8146654434301478217.txt reduce_2447414150529347747.txt reduce_5817774696510082350.txt reduce_741305348365297554.txt]
+Take reduce task pls 0
+Do Reducing!!!
+Take reduce task pls 4
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 5
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 9
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 6
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 7
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 8
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 1
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 2
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Take reduce task pls 3
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Task timeout  [reduce_31586611487726771.txt reduce_301899104821765676.txt reduce_5372036081175185915.txt reduce_237969051280182933.txt reduce_8146654434301478217.txt reduce_2447414150529347747.txt reduce_5817774696510082350.txt reduce_741305348365297554.txt]
+Take reduce task pls 0
+Do Reducing!!!
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Task timeout  [reduce_31586611487726771.txt reduce_301899104821765676.txt reduce_5372036081175185915.txt reduce_237969051280182933.txt reduce_8146654434301478217.txt reduce_2447414150529347747.txt reduce_5817774696510082350.txt reduce_741305348365297554.txt]
+Take reduce task pls 0
+Do Reducing!!!
+Done Reduce
+Calling Done Reduce
+Close program now!
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+Got idle! Do idle
+--- crash test: PASS
+*** PASSED ALL TESTS
