@@ -7,6 +7,7 @@ package mr
 //
 
 import (
+	"fmt"
 	"os"
 	"strconv"
 	"time"
@@ -36,8 +37,23 @@ type Task struct {
 }
 
 type ReduceIndex struct {
+	Task       Task
 	Mapkey     map[int][]string
 	Reducetask string
+}
+
+const Debug = 1
+
+func Dprintf(format string, a ...interface{}) {
+	if Debug > 0 {
+		fmt.Printf(format, a...)
+	}
+}
+
+func Dprintln(a ...interface{}) {
+	if Debug > 0 {
+		fmt.Println(a...)
+	}
 }
 
 // Add your RPC definitions here.

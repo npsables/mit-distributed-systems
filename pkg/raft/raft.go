@@ -21,6 +21,7 @@ import (
 	//	"bytes"
 	"sync"
 	"sync/atomic"
+	"time"
 
 	//	"github.com/arindas/mit-6.824-distributed-systems/pkg/labgob"
 	"github.com/arindas/mit-6.824-distributed-systems/pkg/labrpc"
@@ -60,6 +61,7 @@ type Raft struct {
 	dead      int32               // set by Kill()
 
 	// Your data here (2A, 2B, 2C).
+	currentTerm int
 	// Look at the paper's Figure 2 for a description of what
 	// state a Raft server must maintain.
 
@@ -139,6 +141,8 @@ func (rf *Raft) Snapshot(index int, snapshot []byte) {
 //
 type RequestVoteArgs struct {
 	// Your data here (2A, 2B).
+	Term        int
+	CandidateID int
 }
 
 //
@@ -147,6 +151,19 @@ type RequestVoteArgs struct {
 //
 type RequestVoteReply struct {
 	// Your data here (2A).
+	Term        int
+	VoteGranted bool
+}
+
+// TODO: AppendEntries
+type AppendEntries struct {
+	// WTF IS IN HERE?
+	term         int
+	leaderID     int
+	prevLogIndex int
+	prevLogTerm  int
+	entries      []int
+	leaderCommit string
 }
 
 //
@@ -154,6 +171,7 @@ type RequestVoteReply struct {
 //
 func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	// Your code here (2A, 2B).
+
 }
 
 //
@@ -238,8 +256,9 @@ func (rf *Raft) killed() bool {
 // The ticker go routine starts a new election if this peer hasn't received
 // heartsbeats recently.
 func (rf *Raft) ticker() {
-	for rf.killed() == false {
-
+	for !rf.killed() {
+		DPrintf("Sleep %v\n", time.Second)
+		time.Sleep(time.Second)
 		// Your code here to check if a leader election should
 		// be started and to randomize sleeping time using
 		// time.Sleep().

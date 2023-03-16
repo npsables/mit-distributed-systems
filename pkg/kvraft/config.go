@@ -199,6 +199,7 @@ func (cfg *config) makeClient(to []int) *Clerk {
 	// a fresh set of ClientEnds.
 	ends := make([]*labrpc.ClientEnd, cfg.n)
 	endnames := make([]string, cfg.n)
+	// fmt.Println(endnames)
 	for j := 0; j < cfg.n; j++ {
 		endnames[j] = randstring(20)
 		ends[j] = cfg.net.MakeEnd(endnames[j])

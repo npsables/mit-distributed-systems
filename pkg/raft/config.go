@@ -160,13 +160,13 @@ func (cfg *config) checkLogs(i int, m ApplyMsg) (string, bool) {
 // contents
 func (cfg *config) applier(i int, applyCh chan ApplyMsg) {
 	for m := range applyCh {
-		if m.CommandValid == false {
+		if !m.CommandValid {
 			// ignore other types of ApplyMsg
 		} else {
 			cfg.mu.Lock()
 			err_msg, prevok := cfg.checkLogs(i, m)
 			cfg.mu.Unlock()
-			if m.CommandIndex > 1 && prevok == false {
+			if m.CommandIndex > 1 && !prevok {
 				err_msg = fmt.Sprintf("server %v apply out of order %v", i, m.CommandIndex)
 			}
 			if err_msg != "" {
@@ -254,6 +254,7 @@ func (cfg *config) start1(i int, applier func(int, chan ApplyMsg)) {
 	// a fresh set of ClientEnds.
 	ends := make([]*labrpc.ClientEnd, cfg.n)
 	for j := 0; j < cfg.n; j++ {
+		// DPrintf("Config n: %v\n", cfg.n)
 		ends[j] = cfg.net.MakeEnd(cfg.endnames[i][j])
 		cfg.net.Connect(cfg.endnames[i][j], j)
 	}
@@ -274,8 +275,11 @@ func (cfg *config) start1(i int, applier func(int, chan ApplyMsg)) {
 
 	applyCh := make(chan ApplyMsg)
 
+	// Make raft here? why
+	DPrintf("THIS %+v, %+v, %+v \n", ends[i], i, cfg.saved[i])
 	rf := Make(ends, i, cfg.saved[i], applyCh)
 
+	// Why lock here?
 	cfg.mu.Lock()
 	cfg.rafts[i] = rf
 	cfg.mu.Unlock()
@@ -381,6 +385,7 @@ func (cfg *config) checkOneLeader() int {
 		leaders := make(map[int][]int)
 		for i := 0; i < cfg.n; i++ {
 			if cfg.connected[i] {
+				// DPrintf("TO THIS\n")
 				if term, leader := cfg.rafts[i].GetState(); leader {
 					leaders[term] = append(leaders[term], i)
 				}

@@ -329,6 +329,8 @@ func (rn *Network) MakeEnd(endname interface{}) *ClientEnd {
 	rn.enabled[endname] = false
 	rn.connections[endname] = nil
 
+	// fmt.Printf("wtf %+v \n", e)
+
 	return e
 }
 

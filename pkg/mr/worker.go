@@ -11,6 +11,7 @@ import (
 	"os"
 	"sort"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -59,20 +60,21 @@ func Worker(mapf func(string, string) []KeyValue,
 		case "terminate":
 			os.Exit(1)
 		case "idle":
-			fmt.Println("Got idle! Do idle")
-			time.Sleep(2 * time.Second)
+			Dprintln("Got idle! Do idle")
+			time.Sleep(3 * time.Second)
 		default:
-			fmt.Println("Do idle")
+			Dprintln("Do idle")
 			time.Sleep(1 * time.Second)
 		}
 	}
 }
 
 func doMapping(mapf func(string, string) []KeyValue, task Task) {
-	fmt.Println("Do Mapping!!!", task.Task)
+	Dprintln("Do Mapping!!!", task.Task)
+	timeout := time.After(20 * time.Second)
 	for {
 		select {
-		case <-time.After(100*time.Second - time.Since(task.Time)):
+		case <-timeout:
 			return
 		default:
 			intermediate := []KeyValue{}
@@ -95,24 +97,25 @@ func doMapping(mapf func(string, string) []KeyValue, task Task) {
 				intermediate = append(intermediate, kva...)
 			}
 
-			// fmt.Printf("EXAMPLE MAP: %v \n", intermediate[0])
+			// Dprintf("EXAMPLE MAP: %v \n", intermediate[0])
 
 			data, _ := json.MarshalIndent(intermediate, "", "  ")
-			reduce_task := fmt.Sprintf("reduce_%v.txt", rand.Int())
+			reduce_task := fmt.Sprintf("reduce_%v", strings.Split(task.Task[0], "/")[len(strings.Split(task.Task[0], "/"))-1])
 			_ = ioutil.WriteFile(reduce_task, data, 0644)
 
-			CallPushReduce(mapkey, reduce_task)
-			CallDone(task)
+			CallPushReduce(mapkey, reduce_task, task)
+			// CallDone(task)
 			return
 		}
 	}
 }
 
 func doReducing(reducef func(string, []string) string, task Task) {
-	fmt.Println("Do Reducing!!!")
+	Dprintln("Do Reducing!!!")
+	timeout := time.After(20 * time.Second)
 	for {
 		select {
-		case <-time.After(1*time.Second - time.Since(task.Time)):
+		case <-timeout:
 			// TODO: It is not timeout what the hell?
 			return
 		default:
@@ -124,7 +127,7 @@ func doReducing(reducef func(string, []string) string, task Task) {
 				var err error
 
 				if jsonFile, err = os.Open(file); err != nil {
-					panic(err)
+					fmt.Printf("ERROR %v", err)
 				}
 				defer jsonFile.Close()
 
@@ -155,6 +158,7 @@ func doReducing(reducef func(string, []string) string, task Task) {
 				for k := i; k < j; k++ {
 					values = append(values, intermediate[k].Value)
 				}
+
 				output := reducef(intermediate[i].Key, values)
 
 				// this is the correct format for each line of Reduce output.
@@ -164,7 +168,7 @@ func doReducing(reducef func(string, []string) string, task Task) {
 			}
 
 			ofile.Close()
-			fmt.Println("Done Reduce")
+			Dprintln("Done Reduce")
 			CallDone(task)
 			return
 		}
@@ -177,9 +181,10 @@ func CallGetTask(id string) Task {
 	return reply
 }
 
-func CallPushReduce(mapkey map[int][]string, reducetask string) {
-	fmt.Println("Calling Push Reduce")
+func CallPushReduce(mapkey map[int][]string, reducetask string, task Task) {
+	Dprintln("Calling Push Reduce", task.Task)
 	rq := ReduceIndex{
+		Task:       task,
 		Mapkey:     mapkey,
 		Reducetask: reducetask,
 	}
@@ -188,9 +193,9 @@ func CallPushReduce(mapkey map[int][]string, reducetask string) {
 }
 
 func CallDone(task Task) {
-	fmt.Println("Calling done")
+	Dprintln("Calling Done Reduce")
 	var reply bool
-	call("Coordinator.DoneTask", &task, &reply)
+	call("Coordinator.DoneReduceTask", &task, &reply)
 }
 
 //
@@ -213,7 +218,7 @@ func CallExample() {
 	call("Coordinator.Example", &args, &reply)
 
 	// reply.Y should be 100.
-	fmt.Printf("reply.Y %v\n", reply.Y)
+	Dprintf("reply.Y %v\n", reply.Y)
 }
 
 //
@@ -235,6 +240,6 @@ func call(rpcname string, args interface{}, reply interface{}) bool {
 		return true
 	}
 
-	fmt.Println(err)
+	Dprintln(err)
 	return false
 }
