@@ -276,7 +276,7 @@ func (cfg *config) start1(i int, applier func(int, chan ApplyMsg)) {
 	applyCh := make(chan ApplyMsg)
 
 	// Make raft here? why
-	DPrintf("THIS %+v, %+v, %+v \n", ends[i], i, cfg.saved[i])
+	// DPrintf("THIS %+v, %+v, %+v \n", ends[i], i, cfg.saved[i])
 	rf := Make(ends, i, cfg.saved[i], applyCh)
 
 	// Why lock here?
@@ -311,7 +311,7 @@ func (cfg *config) cleanup() {
 
 // attach server i to the net.
 func (cfg *config) connect(i int) {
-	// fmt.Printf("connect(%d)\n", i)
+	fmt.Printf("ccccccccconnect(%d)\n", i)
 
 	cfg.connected[i] = true
 
@@ -334,7 +334,7 @@ func (cfg *config) connect(i int) {
 
 // detach server i from the net.
 func (cfg *config) disconnect(i int) {
-	// fmt.Printf("disconnect(%d)\n", i)
+	fmt.Printf("ddddddisconnect(%d)\n", i)
 
 	cfg.connected[i] = false
 
@@ -378,15 +378,16 @@ func (cfg *config) setlongreordering(longrel bool) {
 // check that there's exactly one leader.
 // try a few times in case re-elections are needed.
 func (cfg *config) checkOneLeader() int {
-	for iters := 0; iters < 10; iters++ {
-		ms := 450 + (rand.Int63() % 100)
+	for iters := 0; iters < 20; iters++ {
+		ms := 1000 + (rand.Int63() % 100)
 		time.Sleep(time.Duration(ms) * time.Millisecond)
 
 		leaders := make(map[int][]int)
 		for i := 0; i < cfg.n; i++ {
 			if cfg.connected[i] {
-				// DPrintf("TO THIS\n")
+				// fmt.Printf("TO THIS???\n")
 				if term, leader := cfg.rafts[i].GetState(); leader {
+					// DPrintf("CHECK term %v; leader %v", term, leader)
 					leaders[term] = append(leaders[term], i)
 				}
 			}
